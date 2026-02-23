@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* MAIN */
+.main{
+    min-height:calc(100vh - 80px);
+    padding:40px 20px;
+    background:#0f172a;
+    color:white;
+}
+
+/* CARD */
+.card{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(25px);
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* HEADINGS */
+h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+h3{
+    margin-top:25px;
+    font-size:22px;
+}
+
+/* TEXT */
+p{
+    font-size:16px;
+    color:#cbd5f5;
+    line-height:1.6;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    margin-right:10px;
+    padding:12px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    background: linear-gradient(90deg, #facc15, #f59e0b);
+    color:black;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:15px;
+}
+
+.skill{
+    padding:8px 15px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.08);
+    font-size:14px;
+    transition:0.3s;
+}
+
+.skill:hover{
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    transform:scale(1.1);
+}
+
+/* PROJECTS */
+.projects{
+    margin-top:15px;
+}
+
+.project{
+    padding:10px;
+    border-radius:10px;
+    background: rgba(255,255,255,0.05);
+    margin-bottom:10px;
+}
+
+/* LIST */
+ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:5px;
+}
+
+</style>
+
+<div class="main">
+
+    <div class="card">
+
+        <h1>👤 About Me</h1>
+
+        <p>
+            Hi, I'm <b>Om Prakash</b>, a passionate Full Stack Developer and Cyber Security Enthusiast.
+            I specialize in building scalable web applications using modern technologies like Django, Python, and JavaScript.
+            I love creating clean UI designs with smooth animations and 3D effects.
+        </p>
+
+        <!-- EDUCATION -->
+        <h3>🎓 Education</h3>
+        <p>Bachelor's Degree in Computer Science</p>
+
+        <!-- EXPERIENCE -->
+        <h3>💼 Experience</h3>
+        <ul>
+            <li>Freelance Full Stack Developer</li>
+            <li>Worked on Portfolio & Web Apps using Django</li>
+            <li>Basic experience in Cyber Security & APIs</li>
+        </ul>
+
+        <!-- SKILLS -->
+        <h3>🛠️ Skills</h3>
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">Django</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">REST API</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Git</span>
+        </div>
+
+        <!-- PROJECTS -->
+        <h3>🚀 Projects</h3>
+        <div class="projects">
+            <div class="project">✔ Portfolio Website (Django + 3D UI)</div>
+            <div class="project">✔ Authentication System with JWT</div>
+            <div class="project">✔ Contact Form with Email Integration</div>
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <h3>🏆 Achievements</h3>
+        <ul>
+            <li>Built multiple full-stack projects</li>
+            <li>Learning Cyber Security & Cloud Deployment</li>
+            <li>Completed hands-on work with Docker & APIs</li>
+        </ul>
+
+        <!-- RESUME -->
+        <div style="margin-top:25px;">
+            <a href="{% static 'files/resume.pdf' %}" download class="btn">
+                📄 Download Resume
+            </a>
+
+            <a href="{% static 'files/resume.pdf' %}" target="_blank" class="btn">
+                👁️ View Resume
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+from django.contrib import admin
+from .models import Project
+
+
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+
+    list_display = ('title', 'tech_stack', 'created_date')
+    search_fields = ('title', 'tech_stack')
+    list_filter = ('created_date',)
+    prepopulated_fields = {'slug': ('title',)}
+    ordering = ('-created_date',)
+    list_per_page = 10
