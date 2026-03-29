@@ -17,6 +17,10 @@ def project_list(request):
     if tech:
         projects = projects.filter(tech_stack__icontains=tech)
 
+    # Add tech_stack_list to each project for template rendering
+    for project in projects:
+        project.tech_stack_list = [t.strip() for t in project.tech_stack.split(',')]
+
     return render(request, 'projects/project_list.html', {'projects': projects})
 
 

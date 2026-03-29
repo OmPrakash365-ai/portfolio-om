@@ -21,21 +21,26 @@ def contact_view(request):
             message=message
         )
 
-        # Send email to admin
-        send_mail(
-            subject=f"New Contact Message from {name}",
-            message=message,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[settings.EMAIL_HOST_USER],
-        )
+        # Send email to admin (with error handling for development)
+        try:
+            send_mail(
+                subject=f"New Contact Message from {name}",
+                message=message,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[settings.EMAIL_HOST_USER],
+            )
 
-        # Send confirmation email to user
-        send_mail(
-            subject="Thank you for contacting me",
-            message="We received your message. I will contact you soon.",
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[email],
-        )
+            # Send confirmation email to user
+            send_mail(
+                subject="Thank you for contacting me",
+                message="We received your message. I will contact you soon.",
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[email],
+            )
+        except Exception as e:
+            # In development, fail silently. In production, you may want to log this
+            print(f"Email sending failed: {str(e)}")
+            pass
 
         success = True
 

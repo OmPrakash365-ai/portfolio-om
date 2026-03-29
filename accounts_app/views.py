@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import Profile
 from projects_app.models import Project
+import requests
 
 # 🔒 ADMIN CHECK
 def is_admin(user):
@@ -101,3 +102,30 @@ def dashboard(request):
 # ℹ️ ABOUT PAGE
 def about(request):
     return render(request, 'accounts/about.html')
+
+
+
+def education(request):
+    return render(request, 'education.html')
+
+def skills(request):
+    return render(request, 'skills.html')
+
+
+def achievements(request):
+    context = {
+        "total_solved": 150,   # update manually
+        "easy": 70,
+        "medium": 50,
+        "hard": 30
+    }
+    return render(request, "achievements.html", context)
+
+def certificates(request):
+    return render(request, 'certificates.html')
+
+def internships(request):
+    return render(request, 'internships.html')
+
+def hackathons(request):
+    return render(request, 'hackathons.html')

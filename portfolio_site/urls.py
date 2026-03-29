@@ -28,6 +28,7 @@ urlpatterns = [
     path('contact/', include('contact_app.urls')),
     path('api/', include('projects_app.api_urls')),
     path('api/', include('contact_app.api_urls')),
+    
 
     #JWT URLs
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

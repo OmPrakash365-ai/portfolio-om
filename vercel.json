@@ -1,0 +1,9 @@
+{
+  "buildCommand": "python build.py",
+  "outputDirectory": "staticfiles",
+  "installCommand": "pip install -r requirements.txt",
+  "env": {
+    "PYTHONUNBUFFERED": "1",
+    "DJANGO_SETTINGS_MODULE": "portfolio_site.settings"
+  }
+}

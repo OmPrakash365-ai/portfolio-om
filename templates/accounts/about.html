@@ -113,9 +113,9 @@ li{
 
 <div class="main">
 
-    <div class="card">
+    <div class="card fade-in">
 
-        <h1>👤 About Me</h1>
+        <h1>About Me</h1>
 
         <p>
             Hi, I'm <b>Om Prakash</b>, a passionate Full Stack Developer and Cyber Security Enthusiast.
@@ -124,11 +124,11 @@ li{
         </p>
 
         <!-- EDUCATION -->
-        <h3>🎓 Education</h3>
+        <h3 style="color: var(--primary-neon);">Education</h3>
         <p>Bachelor's Degree in Computer Science</p>
 
         <!-- EXPERIENCE -->
-        <h3>💼 Experience</h3>
+        <h3 style="color: var(--primary-neon);">Experience</h3>
         <ul>
             <li>Freelance Full Stack Developer</li>
             <li>Worked on Portfolio & Web Apps using Django</li>
@@ -136,28 +136,28 @@ li{
         </ul>
 
         <!-- SKILLS -->
-        <h3>🛠️ Skills</h3>
-        <div class="skills">
-            <span class="skill">Python</span>
-            <span class="skill">Django</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">REST API</span>
-            <span class="skill">Docker</span>
-            <span class="skill">Git</span>
+        <h3 style="color: var(--primary-neon);">Skills</h3>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:15px;">
+            <span class="badge">Python</span>
+            <span class="badge">Django</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">REST API</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Git</span>
         </div>
 
         <!-- PROJECTS -->
-        <h3>🚀 Projects</h3>
-        <div class="projects">
-            <div class="project">✔ Portfolio Website (Django + 3D UI)</div>
-            <div class="project">✔ Authentication System with JWT</div>
-            <div class="project">✔ Contact Form with Email Integration</div>
+        <h3 style="color: var(--primary-neon);">Projects</h3>
+        <div style="margin-top:15px;">
+            <div style="padding:10px; border-radius:10px; background: rgba(0,255,136,0.1); border-left: 3px solid var(--primary-neon); margin-bottom:10px;">✔ Portfolio Website (Django + Cybersecurity UI)</div>
+            <div style="padding:10px; border-radius:10px; background: rgba(0,212,255,0.1); border-left: 3px solid var(--secondary-cyan); margin-bottom:10px;">✔ Authentication System with JWT</div>
+            <div style="padding:10px; border-radius:10px; background: rgba(255,0,110,0.1); border-left: 3px solid var(--accent-pink); margin-bottom:10px;">✔ Contact Form with Email Integration</div>
         </div>
 
         <!-- ACHIEVEMENTS -->
-        <h3>🏆 Achievements</h3>
+        <h3 style="color: var(--primary-neon);">Achievements</h3>
         <ul>
             <li>Built multiple full-stack projects</li>
             <li>Learning Cyber Security & Cloud Deployment</li>
@@ -166,11 +166,11 @@ li{
 
         <!-- RESUME -->
         <div style="margin-top:25px;">
-            <a href="{% static 'files/resume.pdf' %}" download class="btn">
+            <a href="{% static 'files/resume.pdf' %}" download class="btn btn-primary">
                 📄 Download Resume
             </a>
 
-            <a href="{% static 'files/resume.pdf' %}" target="_blank" class="btn">
+            <a href="{% static 'files/resume.pdf' %}" target="_blank" class="btn btn-secondary" style="margin-left: 10px;">
                 👁️ View Resume
             </a>
         </div>
